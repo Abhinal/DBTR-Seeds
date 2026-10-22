@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #1b4d3e;
+    --primary-dark: #12352b;
+    --primary-light: #246a56;
+    --accent: #dda15e;
+    --accent-light: #fefae0;
+    --earth: #bc6c25;
+    --surface: #ffffff;
+    --surface-muted: #f8faf9;
+    --border: #e2e8f0;
+    --foreground: #0f172a;
+    --foreground-muted: #475569;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    background-color: var(--surface-muted);
+    color: var(--foreground);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(18, 53, 43, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(221, 161, 94, 0.2);
+}
+
+/* Subtle agricultural organic pattern background */
+.bg-agro-pattern {
+  background-color: #12352b;
+  background-image: radial-gradient(rgba(221, 161, 94, 0.15) 1px, transparent 1px),
+    radial-gradient(rgba(36, 106, 86, 0.25) 1px, #12352b 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.bg-seed-pattern {
+  background-color: #f8faf9;
+  background-image: radial-gradient(rgba(27, 77, 62, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Seed Card Floating Hover Effect */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(27, 77, 62, 0.12), 0 8px 10px -6px rgba(27, 77, 62, 0.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1b4d3e;
+}
